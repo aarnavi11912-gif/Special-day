@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Boyfriend's Day Aditya ❤️</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  min-height:100vh;
+  font-family:"Poppins","Segoe UI",sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%,#fff 0 8%,transparent 9%),
+    linear-gradient(135deg,#fff7f8,#ffe3e9,#fff);
+  color:#7d1730;
+  overflow-x:hidden;
+}
+
+/* Floating hearts */
+
+.floating-heart{
+  position:fixed;
+  bottom:-50px;
+  z-index:0;
+  pointer-events:none;
+  animation:rise linear forwards;
+}
+
+@keyframes rise{
+  0%{
+    transform:translateY(0) rotate(0);
+    opacity:0;
+  }
+  15%{opacity:.8}
+  100%{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* Cute stickers */
+
+.sticker{
+  position:fixed;
+  font-size:42px;
+  z-index:1;
+  animation:wiggle 3s ease-in-out infinite;
+}
+
+.sticker1{left:3%;top:18%}
+.sticker2{right:3%;top:23%;animation-delay:.7s}
+.sticker3{left:4%;bottom:15%;animation-delay:1.2s}
+.sticker4{right:4%;bottom:12%;animation-delay:1.8s}
+
+@keyframes wiggle{
+  0%,100%{transform:rotate(-5deg) translateY(0)}
+  50%{transform:rotate(7deg) translateY(-12px)}
+}
+
+/* Header */
+
+header{
+  text-align:center;
+  padding:25px 15px 5px;
+  position:relative;
+  z-index:3;
+}
+
+header h1{
+  font-size:clamp(27px,7vw,46px);
+  color:#c71945;
+}
+
+header p{
+  margin-top:8px;
+  color:#a34a60;
+  font-size:15px;
+}
+
+/* Main */
+
+.container{
+  width:min(900px,94%);
+  margin:auto;
+  position:relative;
+  z-index:2;
+}
+
+/* Envelope area */
+
+.envelope-area{
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* Envelope */
+
+.envelope{
+  width:min(420px,82vw);
+  height:270px;
+  position:relative;
+  cursor:pointer;
+  filter:drop-shadow(0 18px 25px rgba(190,20,65,.2));
+  transition:.4s;
+}
+
+.envelope:hover{
+  transform:translateY(-8px);
+}
+
+.env-back{
+  position:absolute;
+  inset:0;
+  background:#c91845;
+  border-radius:14px;
+}
+
+.env-paper{
+  position:absolute;
+  width:88%;
+  height:82%;
+  left:6%;
+  top:8%;
+  background:#fff;
+  border-radius:10px;
+  text-align:center;
+  padding:25px 10px;
+  box-shadow:0 4px 15px #0002;
+}
+
+.env-paper h2{
+  margin-top:35px;
+  color:#c71945;
+}
+
+.env-paper p{
+  margin-top:8px;
+  font-size:13px;
+  color:#9b5265;
+}
+
+.flap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:0;
+  height:0;
+  border-left:210px solid transparent;
+  border-right:210px solid transparent;
+  border-top:140px solid #ed476d;
+  transform-origin:top;
+  transition:1s;
+  z-index:5;
+}
+
+.envelope.open .flap{
+  transform:rotateX(180deg);
+}
+
+.env-left{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:0;
+  height:0;
+  border-top:135px solid transparent;
+  border-bottom:135px solid transparent;
+  border-left:210px solid #b3153d;
+  z-index:4;
+}
+
+.env-right{
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:0;
+  height:0;
+  border-top:135px solid transparent;
+  border-bottom:135px solid transparent;
+  border-right:210px solid #b3153d;
+  z-index:4;
+}
+
+.open-hint{
+  position:absolute;
+  bottom:-48px;
+  width:100%;
+  text-align:center;
+  font-weight:bold;
+  color:#c71945;
+}
+
+/* Letters */
+
+.letters{
+  display:none;
+  padding:25px 0 50px;
+  animation:appear .8s ease;
+}
+
+@keyframes appear{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.section-title h2{
+  color:#c71945;
+  font-size:28px;
+}
+
+.section-title p{
+  color:#a34a60;
+  margin-top:5px;
+}
+
+.letter-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(170px,1fr));
+  gap:18px;
+}
+
+.letter-card{
+  background:rgba(255,255,255,.95);
+  border:2px solid #ffd1db;
+  border-radius:22px;
+  padding:22px 14px;
+  text-align:center;
+  cursor:pointer;
+  box-shadow:0 8px 25px rgba(190,20,65,.1);
+  transition:.35s;
+}
+
+.letter-card:hover{
+  transform:translateY(-8px) rotate(-1deg);
+  box-shadow:0 15px 30px rgba(190,20,65,.18);
+}
+
+.letter-icon{
+  font-size:45px;
+  margin-bottom:10px;
+}
+
+.letter-card h3{
+  color:#c71945;
+  font-size:18px;
+}
+
+.letter-card p{
+  color:#9d5a6b;
+  font-size:13px;
+  margin-top:7px;
+}
+
+/* Modal */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(75,8,28,.72);
+  backdrop-filter:blur(8px);
+  z-index:50;
+  padding:18px;
+  overflow-y:auto;
+}
+
+.modal-box{
+  width:min(680px,100%);
+  margin:5vh auto;
+  background:#fffafa;
+  border-radius:28px;
+  padding:30px 22px;
+  position:relative;
+  box-shadow:0 25px 70px #0005;
+  animation:popup .35s ease;
+}
+
+@keyframes popup{
+  from{
+    transform:scale(.8);
+    opacity:0;
+  }
+  to{
+    transform:scale(1);
+    opacity:1;
+  }
+}
+
+.close{
+  position:absolute;
+  right:15px;
+  top:15px;
+  width:40px;
+  height:40px;
+  border:none;
+  border-radius:50%;
+  background:#ffe1e8;
+  color:#c71945;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.modal-box h2{
+  text-align:center;
+  color:#c71945;
+  padding:15px 35px;
+}
+
+.letter-content{
+  margin-top:15px;
+  background:#fff;
+  border:1px solid #ffd2dc;
+  border-radius:20px;
+  padding:25px;
+  line-height:1.9;
+  white-space:pre-line;
+  color:#713040;
+  text-align:left;
+}
+
+/* Memories */
+
+.memory-section{
+  margin-top:55px;
+}
+
+.upload-box{
+  background:white;
+  border:2px dashed #ef91a5;
+  border-radius:22px;
+  padding:25px 15px;
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.upload-box h3{
+  color:#c71945;
+  margin-bottom:7px;
+}
+
+input[type=file]{
+  margin:15px 0;
+  max-width:100%;
+}
+
+button{
+  border:none;
+  background:#c71945;
+  color:white;
+  padding:11px 20px;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+button:hover{
+  background:#a80e35;
+}
+
+.memory-grid{
+  display:grid;
+  grid-template-columns:
+    repeat(auto-fit,minmax(170px,1fr));
+  gap:17px;
+}
+
+.memory-card{
+  background:white;
+  border-radius:20px;
+  padding:10px;
+  box-shadow:0 8px 25px #c7194518;
+  overflow:hidden;
+}
+
+.memory-card img,
+.memory-card video{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+.memory-name{
+  font-size:12px;
+  color:#8c5362;
+  margin:8px 3px;
+  word-break:break-word;
+}
+
+.delete-btn{
+  background:#ef476f;
+  padding:7px 14px;
+  font-size:12px;
+}
+
+/* Close */
+
+.close-letters{
+  display:block;
+  margin:30px auto 0;
+  background:white;
+  color:#c71945;
+  border:2px solid #efb0bd;
+}
+
+/* Footer */
+
+footer{
+  text-align:center;
+  padding:30px 15px;
+  color:#a34a60;
+}
+
+.love{
+  color:#c71945;
+  font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Cute decorations -->
+
+<div class="sticker sticker1">💗</div>
+<div class="sticker sticker2">🧸</div>
+<div class="sticker sticker3">🌷</div>
+<div class="sticker sticker4">💌</div>
+
+<header>
+
+<h1>Happy Boyfriend's Day ❤️</h1>
+
+<p>
+A little love letter made especially for
+<strong>Aditya</strong> 💕
+</p>
+
+</header>
+
+<div class="container">
+
+<!-- ================= ENVELOPE ================= -->
+
+<section class="envelope-area" id="envelopeArea">
+
+<div>
+
+<div class="envelope"
+     id="envelope"
+     onclick="openEnvelope()">
+
+<div class="env-back"></div>
+
+<div class="env-paper">
+
+<h2>For Aditya 💌</h2>
+
+<p>
+A little surprise is waiting inside...
+</p>
+
+</div>
+
+<div class="flap"></div>
+
+<div class="env-left"></div>
+<div class="env-right"></div>
+
+<div class="open-hint">
+💗 Tap the letter to open 💗
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= LETTER SECTION ================= -->
+
+<section class="letters" id="letters">
+
+<div class="section-title">
+
+<h2>
+💌 Letters From My Heart 💌
+</h2>
+
+<p>
+For the most special boy — Aditya ❤️
+</p>
+
+</div>
+
+
+<div class="letter-grid">
+
+<div class="letter-card"
+     onclick="showLetter(0)">
+
+<div class="letter-icon">💌</div>
+
+<h3>My First Letter</h3>
+
+<p>
+The beginning of our little story...
+</p>
+
+</div>
+
+
+<div class="letter-card"
+     onclick="showLetter(1)">
+
+<div class="letter-icon">❤️</div>
+
+<h3>For My Aditya</h3>
+
+<p>
+Something straight from my heart...
+</p>
+
+</div>
+
+
+<div class="letter-card"
+     onclick="showLetter(2)">
+
+<div class="letter-icon">🌹</div>
+
+<h3>Our Memories</h3>
+
+<p>
+All the little moments I treasure...
+</p>
+
+</div>
+
+
+<div class="letter-card"
+     onclick="showLetter(3)">
+
+<div class="letter-icon">🧸</div>
+
+<h3>One Little Promise</h3>
+
+<p>
+A promise for our future...
+</p>
+
+</div>
+
+
+<div class="letter-card"
+     onclick="showLetter(4)">
+
+<div class="letter-icon">💖</div>
+
+<h3>Why I Love You</h3>
+
+<p>
+A few reasons among millions...
+</p>
+
+</div>
+
+
+<div class="letter-card"
+     onclick="showLetter(5)">
+
+<div class="letter-icon">🎀</div>
+
+<h3>Happy Boyfriend's Day</h3>
+
+<p>
+Your special surprise...
+</p>
+
+</div>
+
+</div>
+
+
+<!-- ================= MEMORY SECTION ================= -->
+
+<div class="memory-section">
+
+<div class="section-title">
+
+<h2>
+📸 Our Memory Corner 🎥
+</h2>
+
+<p>
+Save your favorite moments with Aditya forever ❤️
+</p>
+
+</div>
+
+
+<div class="upload-box">
+
+<h3>
+💕 Add a Beautiful Memory 💕
+</h3>
+
+<p>
+Choose your favorite photos or videos.
+</p>
+
+<input
+type="file"
+id="memoryInput"
+accept="image/*,video/*"
+multiple
+>
+
+<br>
+
+<button onclick="saveMemories()">
+💾 Save Memory
+</button>
+
+<p style="font-size:11px;margin-top:12px;color:#9c6673">
+Memories are stored locally in this browser.
+</p>
+
+</div>
+
+
+<div
+class="memory-grid"
+id="memoryGrid">
+</div>
+
+</div>
+
+
+<button
+class="close-letters"
+onclick="closeEnvelope()">
+
+💌 Close Letters
+
+</button>
+
+</section>
+
+</div>
+
+
+<footer>
+
+Made with endless love for
+<span class="love">Aditya ❤️</span>
+
+<br>
+
+Happy Boyfriend's Day! 💕
+</footer>
+
+
+<!-- ================= LETTER MODAL ================= -->
+
+<div
+class="modal"
+id="letterModal">
+
+<div class="modal-box">
+
+<button
+class="close"
+onclick="closeModal()">
+×
+</button>
+
+<h2 id="letterTitle"></h2>
+
+<div
+class="letter-content"
+id="letterText">
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =================================
+   LOVE LETTERS
+================================= */
+
+const letters = [
+
+{
+title:"💌 My First Letter",
+
+text:`Dear Aditya,
+
+Happy Boyfriend's Day! ❤️
+
+I wanted to create something special for you — something that you can open whenever you want a little reminder of how special you are.
+
+You have become such a beautiful part of my life.
+
+Every conversation, every laugh, every silly moment and every memory means more to me than I can explain.
+
+Thank you for being you.
+
+With lots and lots of love,
+Your special person ❤️`
+},
+
+
+{
+title:"❤️ For My Aditya",
+
+text:`My Dear Aditya,
+
+There are so many things I could say about you, but sometimes my heart simply says:
+
+I am lucky to have you. ❤️
+
+You make ordinary moments feel special.
+
+Your smile can make my entire day better.
+
+And even the smallest memories with you become moments I want to keep forever.
+
+So today, on Boyfriend's Day, I just want you to know...
+
+You are very, very special to me. 💕`
+},
+
+
+{
+title:"🌹 Our Memories",
+
+text:`Aditya,
+
+Some of my favorite memories are not necessarily the biggest moments.
+
+Sometimes they are the smallest things.
+
+A random conversation.
+
+A silly joke.
+
+A smile.
+
+A little message.
+
+A moment when we simply enjoyed being together.
+
+Those tiny moments are the memories I want to keep close to my heart forever.
+
+And I hope we create thousands more. 🌹❤️`
+},
+
+
+{
+title:"🧸 One Little Promise",
+
+text:`Dear Aditya,
+
+I cannot promise that every day will be perfect.
+
+But I can promise that I will always treasure the beautiful moments we create.
+
+I will remember the little things.
+
+I will smile at our silly memories.
+
+And I will always appreciate the happiness you bring into my life.
+
+Here's to more laughs, more memories and more beautiful days together. 🧸❤️`
+},
+
+
+{
+title:"💖 Why I Love You",
+
+text:`Why do I love you?
+
+Because you make me smile.
+
+Because talking to you can make a normal day feel special.
+
+Because your presence feels comforting.
+
+Because our memories make me happy.
+
+Because you are simply YOU.
+
+And honestly...
+
+I could write a thousand reasons and still have another thousand left.
+
+I love you, Aditya. 💖`
+},
+
+
+{
+title:"🎀 Happy Boyfriend's Day",
+
+text:`HAPPY BOYFRIEND'S DAY, ADITYA! 🎀❤️
+
+Today is your day!
+
+So here's your little digital surprise:
+
+💌 A letter for you
+💕 A heart full of love
+📸 A place for our memories
+🧸 A thousand virtual hugs
+🌹 And one very big HAPPY BOYFRIEND'S DAY!
+
+Thank you for being such a special part of my story.
+
+I hope every time you open this website, you remember one thing...
+
+You are loved. ❤️
+
+Happy Boyfriend's Day, Aditya! 💕`
+}
+
+];
+
+
+/* =================================
+   OPEN ENVELOPE
+================================= */
+
+function openEnvelope(){
+
+const envelope =
+document.getElementById("envelope");
+
+envelope.classList.add("open");
+
+setTimeout(()=>{
+
+document.getElementById(
+"envelopeArea"
+).style.display="none";
+
+document.getElementById(
+"letters"
+).style.display="block";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+},700);
+
+}
+
+
+/* =================================
+   CLOSE ENVELOPE
+================================= */
+
+function closeEnvelope(){
+
+document.getElementById(
+"letters"
+).style.display="none";
+
+document.getElementById(
+"envelopeArea"
+).style.display="flex";
+
+document.getElementById(
+"envelope"
+).classList.remove("open");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* =================================
+   SHOW LETTER
+================================= */
+
+function showLetter(index){
+
+document.getElementById(
+"letterTitle"
+).innerText =
+letters[index].title;
+
+document.getElementById(
+"letterText"
+).innerText =
+letters[index].text;
+
+document.getElementById(
+"letterModal"
+).style.display="block";
+
+}
+
+
+/* =================================
+   CLOSE LETTER
+================================= */
+
+function closeModal(){
+
+document.getElementById(
+"letterModal"
+).style.display="none";
+
+}
+
+
+/* =================================
+   INDEXEDDB
+   Permanent browser storage
+================================= */
+
+let db;
+
+const request =
+indexedDB.open(
+"AdityaLoveMemories",
+1
+);
+
+
+request.onupgradeneeded =
+function(event){
+
+db=event.target.result;
+
+if(!db.objectStoreNames.contains("memories")){
+
+db.createObjectStore(
+"memories",
+{
+keyPath:"id",
+autoIncrement:true
+}
+);
+
+}
+
+};
+
+
+request.onsuccess =
+function(event){
+
+db=event.target.result;
+
+loadMemories();
+
+};
+
+
+request.onerror =
+function(){
+
+console.log(
+"Memory database could not be opened."
+);
+
+};
+
+
+/* =================================
+   SAVE MEMORY
+================================= */
+
+function saveMemories(){
+
+const input =
+document.getElementById(
+"memoryInput"
+);
+
+if(!input.files.length){
+
+alert(
+"Please choose a photo or video first 💕"
+);
+
+return;
+
+}
+
+const transaction =
+db.transaction(
+["memories"],
+"readwrite"
+);
+
+const store =
+transaction.objectStore(
+"memories"
+);
+
+
+Array.from(input.files).forEach(
+file=>{
+
+store.add({
+
+name:file.name,
+
+type:file.type,
+
+data:file,
+
+date:new Date()
+.toLocaleString()
+
+});
+
+});
+
+
+transaction.oncomplete =
+function(){
+
+input.value="";
+
+loadMemories();
+
+alert(
+"Memory saved successfully ❤️"
+);
+
+};
+
+}
+
+
+/* =================================
+   LOAD MEMORIES
+================================= */
+
+function loadMemories(){
+
+if(!db)return;
+
+const grid =
+document.getElementById(
+"memoryGrid"
+);
+
+grid.innerHTML="";
+
+
+const transaction =
+db.transaction(
+["memories"],
+"readonly"
+);
+
+const store =
+transaction.objectStore(
+"memories"
+);
+
+
+store.openCursor()
+.onsuccess=function(event){
+
+const cursor =
+event.target.result;
+
+if(!cursor)return;
+
+
+const memory =
+cursor.value;
+
+
+const card =
+document.createElement("div");
+
+card.className =
+"memory-card";
+
+
+const url =
+URL.createObjectURL(
+memory.data
+);
+
+
+let media;
+
+
+if(memory.type.startsWith("video")){
+
+media =
+document.createElement("video");
+
+media.controls=true;
+
+media.playsInline=true;
+
+}else{
+
+media =
+document.createElement("img");
+
+}
+
+
+media.src=url;
+
+card.appendChild(media);
+
+
+const name =
+document.createElement("div");
+
+name.className =
+"memory-name";
+
+name.innerText =
+"💕 "+memory.name;
+
+card.appendChild(name);
+
+
+const deleteButton =
+document.createElement("button");
+
+deleteButton.className =
+"delete-btn";
+
+deleteButton.innerText =
+"🗑️ Delete";
+
+deleteButton.onclick =
+function(){
+
+deleteMemory(memory.id);
+
+};
+
+
+card.appendChild(
+deleteButton
+);
+
+grid.appendChild(card);
+
+
+cursor.continue();
+
+};
+
+}
+
+
+/* =================================
+   DELETE MEMORY
+================================= */
+
+function deleteMemory(id){
+
+const answer =
+confirm(
+"Are you sure you want to delete this memory? ❤️"
+);
+
+if(!answer)return;
+
+
+const transaction =
+db.transaction(
+["memories"],
+"readwrite"
+);
+
+transaction
+.objectStore("memories")
+.delete(id);
+
+
+transaction.oncomplete =
+function(){
+
+loadMemories();
+
+};
+
+}
+
+
+/* =================================
+   FLOATING HEARTS
+================================= */
+
+function createHeart(){
+
+const heart =
+document.createElement("div");
+
+heart.className =
+"floating-heart";
+
+const hearts=[
+"❤️","💕","💗",
+"💖","💘","💝"
+];
+
+heart.innerText =
+hearts[
+Math.floor(
+Math.random()*hearts.length
+)
+];
+
+heart.style.left =
+Math.random()*100+"vw";
+
+heart.style.fontSize =
+(14+Math.random()*24)+"px";
+
+heart.style.animationDuration =
+(5+Math.random()*5)+"s";
+
+document.body.appendChild(
+heart
+);
+
+setTimeout(
+()=>heart.remove(),
+10000
+);
+
+}
+
+setInterval(
+createHeart,
+650
+);
+
+
+/* =================================
+   CLICK OUTSIDE MODAL
+================================= */
+
+window.addEventListener(
+"click",
+function(event){
+
+const modal =
+document.getElementById(
+"letterModal"
+);
+
+if(event.target===modal){
+
+closeModal();
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
